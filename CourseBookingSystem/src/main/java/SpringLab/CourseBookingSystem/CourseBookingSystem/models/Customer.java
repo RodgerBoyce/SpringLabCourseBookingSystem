@@ -1,20 +1,37 @@
 package SpringLab.CourseBookingSystem.CourseBookingSystem.models;
 
 
+import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Customer {
+@Entity
+@Table(name = "customers")
+
+public class Customer implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "town")
     private String town;
+
+    @Column(name = "age")
     private int age;
+
+
+    @OneToMany(mappedBy = "customer", fetch = FetchType.LAZY)
     private List<Booking> bookings;
 
     public Customer(String name, String town, int age) {
         this.name = name;
         this.town = town;
         this.age = age;
-        this.bookings = new ArrayList<>();
     }
 
     public String getName() {
@@ -48,4 +65,17 @@ public class Customer {
     public void setBookings(List<Booking> bookings) {
         this.bookings = bookings;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Customer() {
+    }
+
+
 }

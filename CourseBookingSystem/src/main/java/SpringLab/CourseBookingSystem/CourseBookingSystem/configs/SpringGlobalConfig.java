@@ -1,4 +1,4 @@
-package configs;
+package SpringLab.CourseBookingSystem.CourseBookingSystem.configs;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;

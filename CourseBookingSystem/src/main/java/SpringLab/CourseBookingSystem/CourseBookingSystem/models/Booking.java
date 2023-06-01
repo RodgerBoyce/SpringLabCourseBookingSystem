@@ -1,4 +1,4 @@
-package models;
+package SpringLab.CourseBookingSystem.CourseBookingSystem.models;
 
 public class Booking {
     private String date;

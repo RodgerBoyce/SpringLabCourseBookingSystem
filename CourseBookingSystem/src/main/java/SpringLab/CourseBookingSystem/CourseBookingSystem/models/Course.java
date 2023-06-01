@@ -1,4 +1,4 @@
-package models;
+package SpringLab.CourseBookingSystem.CourseBookingSystem.models;
 
 import java.util.ArrayList;
 import java.util.List;

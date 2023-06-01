@@ -8,5 +8,5 @@ import java.util.List;
 
 @Repository
 public interface CourseRepository extends JpaRepository<Course, Long>  {
-//    List<Ship> findByPiratesFirstName(String firstName);
+    List<Course> findByRating(int rating);
 }
